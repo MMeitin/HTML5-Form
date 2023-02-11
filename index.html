@@ -27,11 +27,13 @@
                     </div>
                     <div class="col-5">
                         <label for="card" class="form-label fw-bold">Card #</label>
-                        <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXX">
+                        <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXX"
+                            pattern="[0-9]{16}" maxlength="16" required>
                     </div>
                     <div class="col-3">
                         <label for="cvc" class="form-label fw-bold">CVC #</label>
-                        <input type="text" class="form-control" id="inputCVC" placeholder="0000">
+                        <input type="text" class="form-control" id="inputCVC" placeholder="0000" pattern="[0-9]{3}"
+                            maxlength="3" required>
                     </div>
                     <div class="col-4">
                         <label for="amount" class="form-label fw-bold">Amount</label>
@@ -39,26 +41,26 @@
                             <span class="border-0 bg-transparent">
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </span>
-                            <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
+                            <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
                         </div>
                     </div>
                     <!-- Segunda fila  -->
                     <div class="col-6">
                         <label for="name" class="form-label fw-bold">First Name</label>
-                        <input type="text" class="form-control" id="inputName">
+                        <input type="text" pattern=[a-zA-Z] class="form-control" id="inputName" required>
                     </div>
                     <div class="col-6">
                         <label for="surname" class="form-label fw-bold">Last Name</label>
-                        <input type="text" class="form-control" id="inputSurname">
+                        <input type="text" pattern=[a-zA-Z] class="form-control" id="inputSurname" required>
                     </div>
                     <!-- Tercera fila  -->
                     <div class="col-6">
                         <label for="city" class="form-label fw-bold">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" pattern=[a-zA-Z] class="form-control" id="inputCity" required>
                     </div>
                     <div class="col-3">
                         <label for="state" class="form-label fw-bold">State</label>
-                        <select class="form-select" id="inputState">
+                        <select class="form-select" id="inputState" required>
                             <option selected disabled>Pick a state</option>
                             <option value="1">Ohio</option>
                             <option value="2">Alaska</option>
@@ -67,46 +69,46 @@
                     </div>
                     <div class="col-3">
                         <label for="postalcode" class="form-label fw-bold">Postal Code</label>
-                        <input type="text" class="form-control" id="inputPostalCode">
+                        <input type="number" class="form-control" id="inputPostalCode" required>
                     </div>
                     <!-- Cuarta fila  -->
                     <div class="row mt-3">
                         <div class="col-6">
-                            <label for="creditc" class="form-label fw-bold">We accept:</label>
+                            <label for="creditc" class="form-label fw-bold" required>We accept:</label>
                             <br>
-                            <div class="form-group btn btn-secondary">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
-                                        <i class="fa-brands fa-cc-visa"></i>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
-                                        <i class="fa-brands fa-cc-mastercard"></i>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
-                                        <i class="fa-brands fa-cc-apple-pay"></i>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
-                                        <i class="fa-brands fa-cc-amazon-pay"></i>
-                                    </div>
+                            <div class="form-group btn btn-secondary" required>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
+                                    <i class="fa-brands fa-cc-apple-pay"></i>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tarjeta1" id="tarjeta1">
+                                    <i class="fa-brands fa-cc-amazon-pay"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <label for="city" class="form-label fw-bold">Message</label>
+                            <label for="city" class="form-label fw-bold" required>Message</label>
                             <textarea class="form-control" style="overflow:auto;resize:none"></textarea>
                             <small id="passwordHelpBlock" class="form-text text-muted">Add any notes here.</small>
                         </div>
                     </div>
-                </form>
             </div>
             <div class="card-footer">
                 <div class="col-12 text-end">
                     <a href="#" class="btn btn-secondary">Cancel</a>
-                    <a href="#" class="btn btn-primary">Send</a>
+                    <input type="submit" class="btn btn-primary" value="Send">
                 </div>
             </div>
+            </form>
         </div>
     </div>
 
